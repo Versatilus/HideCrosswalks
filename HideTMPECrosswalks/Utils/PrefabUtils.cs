@@ -71,6 +71,7 @@ namespace HideTMPECrosswalks.Utils {
         }
 
         public static bool HasSameNodeAndSegmentTextures(NetInfo info, int texID) {
+            // update from working-branch-V3
             foreach (var node in info.m_nodes) {
                 foreach (var seg in info.m_segments) {
                     if (node.m_material == seg.m_material) return true;

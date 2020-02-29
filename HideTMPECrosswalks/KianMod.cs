@@ -7,7 +7,7 @@ using System;
 
 namespace HideTMPECrosswalks {
     public class KianModInfo : IUserMod {
-        public string Name => "RM TMPE Crossings V3.0";
+        public string Name => "RM TMPE Crossings V4.0";
         public string Description => "Automatically hide crosswalk textures on segment ends when TMPE bans crosswalks";
 
         [UsedImplicitly]
