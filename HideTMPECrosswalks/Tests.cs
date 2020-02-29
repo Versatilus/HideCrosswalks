@@ -27,7 +27,7 @@ namespace HideTMPECrosswalks {
         }
 
         public static void _Test() {
-            foreach (var info in Roads()) {
+            foreach (var info in Networks()) {
                 Extensions.Log(info.name);
                 try {
                     ChangeTextures(info);
@@ -49,7 +49,7 @@ namespace HideTMPECrosswalks {
         public class NodeExt : NetInfo.Node { public int extra_field = 2; }
 
         public static NetInfo GetInfo() {
-            foreach (var info in Roads())
+            foreach (var info in Networks())
                 if (info.GetUncheckedLocalizedTitle() == "Four-Lane Road")
                     return info;
             return null;

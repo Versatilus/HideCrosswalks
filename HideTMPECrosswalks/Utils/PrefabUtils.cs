@@ -84,7 +84,7 @@ namespace HideTMPECrosswalks.Utils {
             return false;
         }
 
-        public static IEnumerable<NetInfo> Roads() {
+        public static IEnumerable<NetInfo> Networks() {
 #if !DEBUG // exclude in asset editor
             if (Extensions.currentMode == AppMode.AssetEditor)
                 yield return null;
@@ -100,7 +100,7 @@ namespace HideTMPECrosswalks.Utils {
 
         public static void CreateNoZebraTextures() {
             TextureUtils.Init();
-            foreach(var info in Roads()) {
+            foreach(var info in Networks()) {
                 Extensions.Log("CreateNoZebraTextures: " + info.GetLocalizedTitle());
                 try {
                     NodeInfoExt.RemoveNoZebraTexture(info);
@@ -114,7 +114,7 @@ namespace HideTMPECrosswalks.Utils {
         }
 
         public static void RemoveNoZebraTextures() {
-            foreach (var info in Roads()) {
+            foreach (var info in Networks()) {
                 try {
                     NodeInfoExt.RemoveNoZebraTexture(info);
                 }
